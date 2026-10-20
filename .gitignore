@@ -1,0 +1,65 @@
+# Game disc images, ROMs and extracted tracks
+*.bin
+*.iso
+*.cue
+*.img
+*.ccd
+*.sub
+*.chd
+*.cdi
+*.nrg
+*.rom
+*.pce
+*.gen
+*.smd
+
+# Original third-party translation patches and archives
+*.ppf
+*.ips
+*.bps
+*.xdelta
+*.xdelta3
+*.rar
+*.7z
+*.zip
+
+# Proprietary audio, video and captured media
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.opus
+*.aiff
+*.mp4
+*.mkv
+*.avi
+
+# Local/reconstructed workspaces
+/private/
+/local/
+/runtime/
+/.runtime/
+/work/
+/workdir/
+/staging/
+/extracted/
+/output/
+/out/
+/build/
+/dist/
+/tmp/
+
+# Save/state/log files
+*.sav
+*.srm
+*.state
+*.state[0-9]
+*.log
+
+# Python and system caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+Thumbs.db
