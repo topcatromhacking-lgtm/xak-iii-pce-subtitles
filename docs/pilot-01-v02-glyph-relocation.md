@@ -32,7 +32,7 @@ The hook performs four distinct 128-byte HuC6280 `TIA` transfers to the selected
 - The scene-loop `$8EE5` still calls `$9C00`; relocated hook length **698 bytes**, fitted within a 1024-byte verified vacant code cave.
 - `$8593` still contains `9C 44 34` (`STZ $3444`).
 - All other sectors and original Japanese CD-DA tracks are unchanged; CUE has 35 tracks with **only Track 02** replaced.
-- Four independent additional synthetic tests plus legacy coverage: **14 local tests passed**. Tests are limited and do **not** prove Geargrafx renders the new glyph locations.
+- Six new synthetic tests plus eight existing tests: **14 local tests passed**. Tests are limited and do **not** prove Geargrafx renders the new glyph locations.
 
 ## Exact next runtime test, Geargrafx 5 slots only
 
