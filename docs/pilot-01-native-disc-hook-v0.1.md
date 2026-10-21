@@ -55,7 +55,7 @@ An independent minimal HuC6280 interpreter executes all instructions in the inje
 
 ## First runtime experiment
 
-A source-only archive with a reproducible Python builder and **1,091-byte IPS patch** and a separate ready-to-test private English raw Track 02/CUE archive were prepared in the ChatGPT working session. They are **not committed to this public repository**. Use only an authorized personal copy.
+The **1,091-byte** delta patch is now available at [patches/Xak_III_Pilot01_SUB_TEST_Track02.ips](../patches/Xak_III_Pilot01_SUB_TEST_Track02.ips). Its published Git blob SHA-1 (`a1d43deb30f99d309e13ebfee5dce7de8fe5558d`) was independently matched against the original local binary's Git blob SHA-1, and its SHA-256 is pinned above. A source/QA archive and a separate ready-to-test **private** English raw Track 02/CUE archive were also prepared in the ChatGPT conversation; the full derived BIN is **not** included in this public repository. Use only an authorized personal copy.
 
 1. Back up the approved English disc and original Geargrafx states.
 2. Put the experimental English Track 02 and its dedicated split CUE in a **separate copy** of the existing game folder, alongside original Japanese audio Tracks 01 and 03–35.
