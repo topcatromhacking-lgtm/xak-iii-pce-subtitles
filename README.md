@@ -2,11 +2,13 @@
 
 Research project to add timed **English subtitles** to the original Japanese-voiced PC Engine CD cutscenes of *Xak III*. **Subtitling, not dubbing:** preserve Japanese voice acting, CD audio, animation and gameplay.
 
-## Current status (October 2026)
+## Current status (October 21, 2026)
 
-**Verified disc-analysis foundation; no working subtitle patch yet.** The Japanese Track 02 and the NightWolve English translation's original PPF3 patches were compared. We reconstructed a split-track English data track and independently validated every indexed user-data sector against the ISO patch. No cutscene hook, voice-to-track mapping, subtitle display routine or runtime/emulator test has yet been validated.
+**Disc reconstruction, physical Track 28 audio timing and a disc-native cutscene hook are verified. No working on-screen subtitle yet.** The NightWolve English Track 02 has been independently reconstructed and verified against the original PPF3 patches. The King Wavis royal-audience scene plays physical CD Track 28; a real Geargrafx save confirms v0.2's `$8EE5 -> $9C00` hook executes and the injected subtitle sprites enter the native SAT path. However the tester does **not** see `SUB TEST`: two font patterns were overwritten in a later 14.43-second checkpoint and the remaining sprite visibility is unresolved.
 
-See [Disc research](docs/disc-foundation.md), [Subtitle research plan](docs/subtitle-plan.md), and the [rebuild tool](tools/rebuild_english_track02.py).
+A **source-only v0.3 visibility diagnostic** has been built and passed five synthetic/offline checks, but it has **not** been run successfully in Geargrafx. It refreshes glyph graphics each scene-loop call and tests visibility inside the active picture. This is a reversible experiment, not synchronized subtitle support.
+
+See [v0.3 visibility probe](docs/pilot-01-v03-visibility-probe.md), [v0.2 runtime checkpoint](docs/pilot-01-v02-first-runtime-checkpoint.md), [Disc research](docs/disc-foundation.md), [Subtitle research plan](docs/subtitle-plan.md), and the [rebuild tool](tools/rebuild_english_track02.py).
 
 ## Reproduce the English Track 02 reconstruction
 
