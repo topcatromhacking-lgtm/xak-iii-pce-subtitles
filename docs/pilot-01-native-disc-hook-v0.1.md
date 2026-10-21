@@ -65,6 +65,11 @@ A source-only archive with a reproducible Python builder and **1,091-byte IPS pa
 
 A successful marker is only the **first graphics proof**. Actual subtitles will need live timing against physical Track 28, text scripts, scene-skip handling and a tested cleanup lifecycle.
 
+
+## Geargrafx save-state CRC compatibility verified
+
+The [Geargrafx CUE/BIN implementation](https://github.com/drhelius/Geargrafx/blob/main/src/cdrom_cuebin_image.cpp) computes its disc identity CRC32 from **indexed data sectors 1–64** of the first MODE1 data track. Independently applying this exact algorithm to the original English Track 02 and the patched output yields **`EDFD65CB`**, which matches the `rom_crc` and serialized content CRC in the original Geargrafx slot-1 save state. The experimental patch changes only indexed sectors **518 and 520**, leaving this CRC source unchanged. Therefore the clean military-camp save should remain loadable after switching to the experimental English split-track CUE. This is a verified *format/identity check*, not a substitute for actual emulator playback testing.
+
 ## Prior results
 
 - [Slot 7 sprite-counter overflow and reason to retain the original reset](pilot-01-slot7-sprite-overflow.md)
