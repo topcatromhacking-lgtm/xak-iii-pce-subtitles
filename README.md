@@ -6,9 +6,9 @@ Research project to add timed **English subtitles** to the original Japanese-voi
 
 **Disc reconstruction, physical Track 28 audio timing and a disc-native cutscene hook are verified. No working on-screen subtitle yet.** The NightWolve English Track 02 has been independently reconstructed and verified against the original PPF3 patches. The King Wavis royal-audience scene plays physical CD Track 28; a real Geargrafx save confirms v0.2's `$8EE5 -> $9C00` hook executes and the injected subtitle sprites enter the native SAT path. However the tester does **not** see `SUB TEST`: two font patterns were overwritten in a later 14.43-second checkpoint and the remaining sprite visibility is unresolved.
 
-A **source-only v0.3 visibility diagnostic** has been built and passed five synthetic/offline checks, but it has **not** been run successfully in Geargrafx. It refreshes glyph graphics each scene-loop call and tests visibility inside the active picture. This is a reversible experiment, not synchronized subtitle support.
+**The v0.3 probe has now achieved visible text in a real Geargrafx cinematic save at 14.43 seconds into Track 28:** the frame displays partial `SUB TE`. However the picture's lower edge is corrupted, consistent with two font patterns colliding with background tilemap rows. A **source-only v0.4 stability probe** has been prepared with seven passing offline tests to move glyph patterns out of those rows and upload the font once. **v0.4 display has not been validated in Geargrafx.** Neither experiment is synchronized English dialogue support.
 
-See [v0.3 visibility probe](docs/pilot-01-v03-visibility-probe.md), [v0.2 runtime checkpoint](docs/pilot-01-v02-first-runtime-checkpoint.md), [Disc research](docs/disc-foundation.md), [Subtitle research plan](docs/subtitle-plan.md), and the [rebuild tool](tools/rebuild_english_track02.py).
+See [v0.4 stability probe](docs/pilot-01-v04-stability-probe.md), [v0.3 visibility probe](docs/pilot-01-v03-visibility-probe.md), [v0.2 runtime checkpoint](docs/pilot-01-v02-first-runtime-checkpoint.md), [Disc research](docs/disc-foundation.md), [Subtitle research plan](docs/subtitle-plan.md), and the [rebuild tool](tools/rebuild_english_track02.py).
 
 ## Reproduce the English Track 02 reconstruction
 
