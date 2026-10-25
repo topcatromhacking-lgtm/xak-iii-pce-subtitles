@@ -4,7 +4,7 @@ import struct
 import unittest
 
 import build_xak_iii_v10_disc_raster as v
-import build_xak_iii_v03_visibility_probe as core
+import xak_iii_disc_utils as core
 
 
 def dummy_sector():
