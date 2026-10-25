@@ -25,8 +25,7 @@ from pathlib import Path
 import re
 import struct
 
-import build_xak_iii_v03_visibility_probe as core
-import build_xak_iii_v05_glyph_stability_probe as v05
+import xak_iii_disc_utils as core
 
 INPUT_TRACK = 'Xak_III_English_Track02_SUB_TEST_v05.bin'
 INPUT_CUE = 'Xak_III_English_SUB_TEST_v05_Pilot01.cue'
@@ -153,7 +152,7 @@ def make_cue(original: str) -> str:
 
 
 def check_camp(state: bytes) -> bool:
-    if len(state)!=749238 or sha(state)!=v05.CLEAN_CAMP_SHA256 or \
+    if len(state)!=749238 or sha(state)!='8c8f89e94bb7b89c4d76183f562ba7e2742eb385759eda840b1f976fe50183ba' or \
             struct.unpack_from('<III',state,len(state)-200)!=(0x82190619,44,len(state)):
         raise ValueError('Original military-camp state1 failed pinned hash check')
     return True
