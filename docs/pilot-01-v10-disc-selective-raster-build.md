@@ -46,7 +46,7 @@ The proposed builder uses the verified **v0.5 Track02 SHA256 `a87babc4dafa0f4309
 
 We inspected the **actual user v0.9 state2**, confirming its 5-byte callsite is `20 DF 76 EA EA` and 10-byte helper is `29 3F 1D 72 3E 10 02 09 40 60`, exactly what the builder writes. **12 synthetic regression tests passed** locally; these did not use the complete real v0.5 data BIN, which resides on the user's own PC.
 
-The private ZIP supplied to the user, **`Xak_III_v10_Disc_Native_Selective_Raster_Source_Only.zip`**, includes three dependent source Python modules, tests and instructions. It contains **no proprietary ROM, audio, patches derived from the game, or save states**.
+The private ZIP supplied to the user, **`Xak_III_v10_Disc_Native_Selective_Raster_Source_Only.zip`**, includes the guarded Python builder, a standalone MODE1/IPS utility module, synthetic tests and instructions. It contains **no proprietary ROM, audio, patches derived from the game, or save states**.
 
 ## Next real Geargrafx validation
 
