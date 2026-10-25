@@ -2,6 +2,9 @@
 import hashlib
 import struct
 import unittest
+import sys
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'tools'))
 
 import build_xak_iii_v10_disc_raster as v
 import xak_iii_disc_utils as core
