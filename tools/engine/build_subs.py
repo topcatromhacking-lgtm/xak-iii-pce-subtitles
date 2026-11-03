@@ -127,6 +127,12 @@ def main():
     ap.add_argument('--y2', type=int, default=204)
     ap.add_argument('--workdir')
     ns = ap.parse_args()
+    # Preserve the validated v0.30 build and all input media: never overwrite
+    # the source BIN, an existing destination BIN, or its audit report.
+    if os.path.realpath(ns.o) == os.path.realpath(ns.track02):
+        sys.exit('Refusing to overwrite the input Track 02')
+    if os.path.lexists(ns.o) or os.path.lexists(ns.o + '.json'):
+        sys.exit('Refusing to overwrite an existing Track 02 build or report')
     track = bytearray(open(ns.track02, 'rb').read())
     sha = hashlib.sha256(track).hexdigest()
     if sha != V10_SHA:
