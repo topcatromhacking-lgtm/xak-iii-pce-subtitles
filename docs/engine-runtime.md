@@ -22,8 +22,11 @@ and the raster CR write at `$65AA JSR $76DF`). The output is a build product: ne
 ## Per frame (called once per scene main-loop pass)
 
 1. Frame counter = VBlank counter `$2338` deltas since the first call. Cue times become
-   frames as `(t - 0.313 s) * 59.826`; 0.313 s is the Track 28 time of the first engine call
-   (measured from a recording of the v0.10 SUB TEST build: track start vs first visible text).
+   frames as `(t - 0.228 s) * 59.7168` (`build_subs.py` defaults `CLOCK_OFFSET`, `CLOCK_FPS`).
+   The VBlank counter runs 0.183% slow relative to CD audio in this scene, so the nominal
+   59.826 Hz drifted subtitles +0.26 s late by the end of the scene. Both constants were fit
+   from a Mednafen recording (audio cross-correlated against the track to place the CD
+   clock, band-text changes detected per frame); see `tools/timing/align_recording.py`.
 2. State machine per cue: render (proportional 8x12 font, up to two lines split by `|`,
    centred, packed into up to 32 16x16 cells) -> wait for start -> upload 1 KB of
    patterns with `TIA` -> shown until end -> next cue.
@@ -50,6 +53,27 @@ next band. The game's width routines are hooked to keep `NARROW` current.
 * Text fits and is centred in every shot type, including the narrow close-ups.
 * Full-frame scan of 4,566 recorded frames over all King-scene shots: no non-text pixels
   and no stray white in the band, no picture garbage at the band edge.
+
+* Timing (calibrated build, 55 cues, Track 28 cross-correlated at NCC >= 0.988): start
+  error median -6 ms, 49 of 55 cue starts within -25..+10 ms. Six back-to-back
+  changes measured +64..+254 ms late; spot checks of those frames show the change on time,
+  so this looks like a frame-index vs. timestamp mismatch in the recording. The last
+  cue ("...") is too small for the detector.
+
+## Scene status
+
+| scene | track | timing | in-game |
+|---|---|---|---|
+| VS1 King Webis audience | 28 | reviewed (ASR + hand) | verified in Mednafen |
+| VS2 Fray/Pixie meeting | 31 | 2 cues timed; the other rows belong to a text-box scene | no save state nearby |
+| VS3 Necromancer / father | 32 | timed (ASR draft for the long opening monologue) | no save state nearby |
+| VS4 airship landing | 29 | partial, med/low confidence | no save state nearby |
+| VS5 / VS6 / VS7 | 33 / 34 / 30 | ASR mostly failed; low confidence | no save state nearby |
+
+VS7 is Track 30 (Track 35 is instrumental). To hook scenes other than VS1, the engine
+needs (a) to select the cue table by the CD track being played, and (b) a check, per scene,
+that bank81 `$76E9-$785E`, bank83 and sprite palettes 6/7/13/14 are free there. This needs
+save states close to those cinematics.
 
 ## Risks on real hardware (not testable in Mednafen)
 

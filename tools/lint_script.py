@@ -21,7 +21,7 @@ from font_build import Font, MAX_LINE_PX, MAX_LINES
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOFT_CHARS = 28
 MAX_CPS = 17.0
-STATUSES = {"DRAFT", "DRAFT-verify-audio", "TODO-needs-audio", "SKIP-system-text", "FINAL"}
+STATUSES = {"DRAFT", "DRAFT-verify-audio", "TODO-needs-audio", "SKIP-system-text", "FINAL", "DRAFT-asr"}  # DRAFT-asr: Japanese transcribed from the voice track by ASR + review; needs a listener
 REQUIRED = ["cue_id", "scene_id", "cd_track", "speaker", "ja_text", "ja_source",
             "en_subtitle", "start", "end", "status"]
 

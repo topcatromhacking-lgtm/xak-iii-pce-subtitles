@@ -17,8 +17,8 @@ Every touched MODE1 sector gets new EDC/ECC. Nothing else changes; no audio trac
 
 Cue times in the TSV are seconds from the cue's CD track INDEX 01. They become frame
 numbers counted from the engine's first call: frame = (t - offset) * fps, where offset is
-the track time at that first call (Mednafen 1.32, King Webis T28: 0.313 s, measured by
-docs/engine-runtime.md). Writes build products only; never commit them (game data).
+the track time at that first call and fps is the engine clock rate per CD second
+(Mednafen 1.32, King Webis T28: 0.228 s and 59.717, see docs/engine-runtime.md). Writes build products only; never commit them (game data).
 """
 import argparse, csv, hashlib, json, os, subprocess, sys, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -30,6 +30,11 @@ V10_SHA = '64ef0a47b2beeefc12e6a113a056964e01b67e5b71d201449c699ed5f0bb9e46'
 CDRAM_USER = 0xFE800
 PREGAP = 225
 FPS = 59.8261
+# Engine frame clock vs CD audio, fitted from a Mednafen recording of the King Webis scene
+# with the engine running (55 cue onsets): the VBlank counter at $2338 runs 0.183% slow
+# against the CD clock, and the first engine call is at Track 28 t = 0.228 s.
+CLOCK_FPS = 59.7168
+CLOCK_OFFSET = 0.228
 PALS = (6, 7, 13, 14)                      # sprite palettes unused by the King scene
 WHITE = 0x1FF
 
@@ -114,8 +119,8 @@ def main():
     ap.add_argument('--scene', default='VS1')
     ap.add_argument('--track02', required=True)
     ap.add_argument('-o', required=True)
-    ap.add_argument('--offset', type=float, default=0.313, help='track seconds at the first engine call')
-    ap.add_argument('--fps', type=float, default=FPS)
+    ap.add_argument('--offset', type=float, default=CLOCK_OFFSET, help='track seconds at the first engine call')
+    ap.add_argument('--fps', type=float, default=CLOCK_FPS, help='engine frame clock rate (frames per CD second)')
     ap.add_argument('--lead', type=float, default=0.0, help='show cues this many seconds early')
     ap.add_argument('--blk-y', type=int, default=176)
     ap.add_argument('--y1', type=int, default=184)
