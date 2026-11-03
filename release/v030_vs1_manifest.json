@@ -1,0 +1,46 @@
+{
+  "project": "Xak III PCE English voice-cinematic subtitle pilot",
+  "version": "v0.30 VS1 freeze candidate",
+  "captured_at": "2026-11-03",
+  "branch_source": "grokbot/subtitle-pipeline",
+  "branch_source_head": "7be17f6c499c999ad063bfd5bbe9206514b17afb",
+  "working_branch": "chatgpt/v031-stabilization",
+  "scene": "VS1 King Webis audience",
+  "physical_audio_track": 28,
+  "timed_cues": 55,
+  "scene_records": 56,
+  "script_status": "DRAFT — translation and residual timing review outstanding",
+  "runtime": "Mednafen 1.32.1 reported success; native hardware unverified",
+  "input": {
+    "media": "clean Japanese split Track 02, Mode1/2352, including 225-sector pregap",
+    "sha256": "af04551ce4bf60d50397e99a6467c9e081b3091caa4eb95c67e7984578021733",
+    "size_bytes": 54773376
+  },
+  "patch": {
+    "name": "Xak_III_subs_v030_VS1_Track02.xdelta",
+    "format": "VCDIFF/xdelta3",
+    "sha256": "9a36d3ca5d2adf2f388c7afbb271b9c36169e2f649407a0be0744810dda6246e",
+    "size_bytes": 210217,
+    "window_count": 7,
+    "structural_validation": "passed"
+  },
+  "expected_output_bytes": 54773376,
+  "decoded_output_sha256": null,
+  "decoded_output_hash_status": "not yet independently verified against clean source",
+  "known_text_to_review": [
+    "VS1-005: ???",
+    "VS1-056: ...",
+    "VS1: Mt. Fuji place-name choice"
+  ],
+  "known_runtime_to_review": [
+    "one-frame transition glitch",
+    "width state after module reload",
+    "real-hardware sprite-limit and palette timing"
+  ],
+  "do_not_modify": [
+    "v0.30 xdelta",
+    "v0.10 verified Track02",
+    "original Japanese audio",
+    "original savestates"
+  ]
+}
