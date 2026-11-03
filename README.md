@@ -64,6 +64,11 @@ To generate a corresponding split-track CUE that reuses the original Japanese au
 
 Put the replacement Track 02 and the original other tracks together in the same directory when testing in an emulator.
 
+## Subtitle pipeline (in progress)
+
+Script table, glossary, lint, font, sprite renderer prototype and audio-timing tools: see
+[`docs/subtitle-pipeline.md`](docs/subtitle-pipeline.md), [`docs/renderer-design.md`](docs/renderer-design.md) and [`docs/timing.md`](docs/timing.md).
+
 ## Research direction
 
 Map actual cutscene/voice triggers, locate existing English text rendering, hook a single cutscene to display one subtitle, validate synchronized playback, then build out the remaining dialogue. Study [Galaxy Fraulein Yuna tools](https://github.com/suppertails66/yunatools), [Yuna 2 tools](https://github.com/suppertails66/yuna2tools) and [Emerald Dragon tools](https://github.com/suppertails66/emdrtools) as references, not ready-made drop-in Xak III patches.

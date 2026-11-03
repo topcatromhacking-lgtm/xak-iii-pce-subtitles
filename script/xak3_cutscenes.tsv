@@ -1,0 +1,84 @@
+cue_id	scene_id	cd_track	speaker	ja_text	ja_source	en_subtitle	en_reference	start	end	status	notes
+VS1-001	VS1	28	King Webis		NW-Jap2EngScript@9704325#0	You have done well, Ratok.|Splendid work in Farland!				DRAFT	Repo cue plan used NW wording 'That was quite a ceremony'; 大儀であった = 'well done'.
+VS1-002	VS1	28	Ratok		NW-Jap2EngScript@9704422#0	Y-Your Majesty, I hope you|are well... er... um...				DRAFT	
+VS1-003	VS1	28	King Webis		NW-Jap2EngScript@9704478#0	Now, now. Let's dispense|with the formalities.				DRAFT	
+VS1-004	VS1	28	King Webis		NW-Jap2EngScript@9704478#1	More importantly, there's a|lady who wishes to see you.				DRAFT	
+VS1-005	VS1	28	Ratok		NW-Jap2EngScript@9704584#0	???				DRAFT	
+VS1-006	VS1	28	Ratok		NW-Jap2EngScript@9704602#0	Pixie?!				DRAFT	
+VS1-007	VS1	28	Pixie		NW-Jap2EngScript@9704626#0	You weren't planning to|leave me behind, were you?				DRAFT	
+VS1-008	VS1	28	Ratok		NW-Jap2EngScript@9704700#0	You've shrunk again?				DRAFT	
+VS1-009	VS1	28	Pixie		NW-Jap2EngScript@9704736#0	Since the demons invaded,|my fairy power is weak here.				DRAFT	妖精界 = fairy realm (NW had 'demon world').
+VS1-010	VS1	28	Pixie		NW-Jap2EngScript@9704736#1	So I couldn't keep human|size, and I shrank!				DRAFT	
+VS1-011	VS1	28	General Beluga		NW-Jap2EngScript@9704868#0	I expect the demon attacks|to grow fiercer from now on.				DRAFT	
+VS1-012	VS1	28	General Beluga		NW-Jap2EngScript@9704868#1	My lords, I urge you all:|never neglect your defenses.				DRAFT	
+VS1-013	VS1	28	King Webis		NW-Jap2EngScript@9704994#0	Indeed. Webis is making|preparations as well.				DRAFT	
+VS1-014	VS1	28	King Webis		NW-Jap2EngScript@9704994#1	It burdens our people, but|this matter is urgent.				DRAFT	
+VS1-015	VS1	28	Ratok		NW-Jap2EngScript@9705106#0	Have you learned anything|about the "Gate"?				DRAFT	
+VS1-016	VS1	28	King Webis		NW-Jap2EngScript@9705158#0	We have.				DRAFT	
+VS1-017	VS1	28	Magician		NW-Jap2EngScript@9705180#0	Allow me to explain that.				DRAFT	
+VS1-018	VS1	28	Magician		NW-Jap2EngScript@9705232#0	The Gate's origins go back|to the War of Sealing.				DRAFT	
+VS1-019	VS1	28	Ratok		NW-Jap2EngScript@9705302#0	The War of Sealing...				DRAFT	
+VS1-020	VS1	28	Magician		NW-Jap2EngScript@9705328#0	Yes. The war the gods fought|to seal away the demons.				DRAFT	
+VS1-021	VS1	28	Magician		NW-Jap2EngScript@9705328#1	We've learned the Gate is a|magic device from that war.				DRAFT	
+VS1-022	VS1	28	Pixie		NW-Jap2EngScript@9705468#0	So what does this|"Gate" thing do?				DRAFT	
+VS1-023	VS1	28	Magician		NW-Jap2EngScript@9705518#0	It seems to be large-scale|teleportation magic.				DRAFT	
+VS1-024	VS1	28	Magician		NW-Jap2EngScript@9705518#1	...Beyond that, I can't say.				DRAFT	
+VS1-025	VS1	28	General Beluga		NW-Jap2EngScript@9705598#0	Strategically, that's a|most intriguing story.				DRAFT	
+VS1-026	VS1	28	Ratok		NW-Jap2EngScript@9705658#0	So where is this "Gate"?				DRAFT	
+VS1-027	VS1	28	Magician		NW-Jap2EngScript@9705712#0	To be honest, that much|I do not know.				DRAFT	
+VS1-028	VS1	28	Ratok		NW-Jap2EngScript@9705766#0	No leads, then...				DRAFT	
+VS1-029	VS1	28	Magician		NW-Jap2EngScript@9705804#0	Oh yes, there is one|more thing we learned.				DRAFT	
+VS1-030	VS1	28	Magician		NW-Jap2EngScript@9705804#1	A sorcerer, Gafuh, lives in|a tower atop Mt. Fuji.				DRAFT	ギンガヌール山 = Mt. Fuji in NightWolve's patch (literally Mt. Ginganul).
+VS1-031	VS1	28	Magician		NW-Jap2EngScript@9705804#2	He seems to know a great|deal about magic devices.				DRAFT	
+VS1-032	VS1	28	King Webis		NW-Jap2EngScript@9705984#0	Gafuh? I hear he's quite|the eccentric...				DRAFT	
+VS1-033	VS1	28	Magician		NW-Jap2EngScript@9705984#1	Yes. He shuns people and|devotes himself to research.				DRAFT	NW box holds two speakers; split here.
+VS1-034	VS1	28	Ratok		NW-Jap2EngScript@9706137#0	Anyway, I'll go ask Gafuh.|Mt. Fuji, right?				DRAFT	
+VS1-035	VS1	28	Magician		NW-Jap2EngScript@9706218#0	That's right.				DRAFT	
+VS1-036	VS1	28	Ratok		NW-Jap2EngScript@9706238#0	Could someone who knows the|way to Mt. Fuji guide me?				DRAFT	
+VS1-037	VS1	28	Pixie		NW-Jap2EngScript@9706324#0	Then I know the way!				DRAFT	
+VS1-038	VS1	28	Pixie		NW-Jap2EngScript@9706324#1	In case you forgot, I was|a palace messenger.				DRAFT	NW misread 忘れてるかもしれないけど ('you may have forgotten').
+VS1-039	VS1	28	Pixie		NW-Jap2EngScript@9706324#1	I know my way around|all of Webis.				DRAFT	
+VS1-040	VS1	28	Ratok		NW-Jap2EngScript@9706468#0	All right, let's head out!				DRAFT	
+VS1-041	VS1	28	King Webis		NW-Jap2EngScript@9706496#0	In times like these I can't|offer much, but take this.				DRAFT	
+VS1-042	VS1	28	(system)		NW-Jap2EngScript@9706496#1					SKIP-system-text	Item-get message (Gemil Potion + 1000 Gold); not voiced, no subtitle.
+VS1-043	VS1	28	King Webis		NW-Jap2EngScript@9706630#0	This Gate is a grave threat|to us all.				DRAFT	
+VS1-044	VS1	28	King Webis		NW-Jap2EngScript@9706630#1	Ratok, I leave the matter|of the Gate to you.				DRAFT	
+VS1-045	VS1	28	Ratok		NW-Jap2EngScript@9706726#0	Yes. I won't fail...				DRAFT	
+VS1-046	VS1	28	Ratok		NW-Jap2EngScript@9706754#0	Pixie?				DRAFT	
+VS1-047	VS1	28	Ratok		NW-Jap2EngScript@9706754#1	What's wrong?				DRAFT	
+VS1-048	VS1	28	Pixie		NW-Jap2EngScript@9706794#0	Your shoulder really is the|comfiest spot, Ratok.				DRAFT	
+VS1-049	VS1	28	Ratok		NW-Jap2EngScript@9706846#0	You won't get off even if I|ask, will you?				DRAFT	
+VS1-050	VS1	28	Pixie		NW-Jap2EngScript@9706890#0	Of course not!				DRAFT	
+VS1-051	VS1	28	Ratok		NW-Jap2EngScript@9706922#0	...Good grief.				DRAFT	
+VS1-052	VS1	28	Pixie		NW-Jap2EngScript@9706948#0	But if you don't like it...				DRAFT	
+VS1-053	VS1	28	Ratok		NW-Jap2EngScript@9706988#0	H-Hey, Pixie! That tickles!				DRAFT	
+VS1-054	VS1	28	Ratok		NW-Jap2EngScript@9706988#1	I thought you liked my|shoulder better!				DRAFT	
+VS1-055	VS1	28	Pixie		NW-Jap2EngScript@9707060#0	But your chest is nice|and warm, too.				DRAFT	
+VS1-056	VS1	28	Ratok		NW-Jap2EngScript@9707094#0	...				DRAFT	
+VS2-001	VS2	31	Fray		NW-Jap2EngScript@5566330#0	Huh?				DRAFT-verify-audio	JP is the in-game text box that SkyeWelse (2006) matched to this cinema; confirm against Track 31.
+VS2-002	VS2	31	Pixie		NW-Jap2EngScript@5566348#0	Don't "huh" me! I asked|what we should do next!				DRAFT-verify-audio	
+VS2-003	VS2	31	Pixie		NW-Jap2EngScript@5566348#1	Spacing out, as always!				DRAFT-verify-audio	
+VS2-004	VS2	31	Fray		NW-Jap2EngScript@5566462#0	Excuse me? I was not|spacing out!				DRAFT-verify-audio	
+VS2-005	VS2	31	Pixie		NW-Jap2EngScript@5566518#0	Oh, really?				DRAFT-verify-audio	
+VS2-006	VS2	31	Pixie		NW-Jap2EngScript@5566518#1	Then tell me where|we're going next.				DRAFT-verify-audio	
+VS2-007	VS2	31	Fray		NW-Jap2EngScript@5566596#0	Uh... well...				DRAFT-verify-audio	
+VS2-008	VS2	31	Pixie		NW-Jap2EngScript@5566630#0	See? You can't answer.				DRAFT-verify-audio	
+VS2-009	VS2	31	Pixie		NW-Jap2EngScript@5566630#1	Listen up. We're off to see|Gafuh, on Mt. Fuji.				DRAFT-verify-audio	
+VS2-010	VS2	31	Ratok		none	Oh, I see.	YsUtopia topic 205 (2006 listening transcript)			TODO-needs-audio	Only in the 2006 transcript (English, from listening); no Japanese source.
+VS2-011	VS2	31	Pixie		none	...	YsUtopia topic 205 (2006 listening transcript)			TODO-needs-audio	Only in the 2006 transcript.
+VS3-001	VS3	32	?		none					TODO-needs-audio	Necromancer's demise + dialogue with Ratok's father: not in any public script; transcribe from Track 32.
+VS3-002	VS3	32	Xak Sword		NW-Jap2EngScript@5576399#0	Ratok!				DRAFT-verify-audio	JP from in-game box matched by SkyeWelse; confirm against Track 32.
+VS3-003	VS3	32	Xak Sword		NW-Jap2EngScript@5576399#1	Heir of the raging|Thunder God!				DRAFT-verify-audio	
+VS3-004	VS3	32	Xak Sword		NW-Jap2EngScript@5576399#2	The time has come!!				DRAFT-verify-audio	
+VS3-005	VS3	32	Ratok		NW-Jap2EngScript@5576464#0	...That's right, Xak Sword!				DRAFT-verify-audio	
+VS3-006	VS3	32	Ratok		NW-Jap2EngScript@5576464#1	I'll put an end to it all!				DRAFT-verify-audio	
+VS3-007	VS3	32	Xak Sword		NW-Jap2EngScript@5576538#0	Spoken like a Duel Knight!				DRAFT-verify-audio	
+VS3-008	VS3	32	Ratok		NW-Jap2EngScript@5576584#0	Father... I will carry on|your will.				DRAFT-verify-audio	
+VS3-009	VS3	32	Ratok		NW-Jap2EngScript@5576584#1	Please, watch over me...				DRAFT-verify-audio	
+VS3-010	VS3	32	Ratok		NW-Jap2EngScript@5576666#0	Let's go, Xak Sword!				DRAFT-verify-audio	
+VS3-011	VS3	32	Ratok		NW-Jap2EngScript@5576666#1	To defeat Zekishis!				DRAFT-verify-audio	
+VS3-012	VS3	32	Xak Sword		NW-Jap2EngScript@5576713#0	Yes!				DRAFT-verify-audio	
+VS4-001	VS4	29	?		none					TODO-needs-audio	No public transcript. Whole scene must be transcribed from Track 29.
+VS5-001	VS5	33	?		none					TODO-needs-audio	No public transcript. Whole scene must be transcribed from Track 33.
+VS6-001	VS6	34	?		none					TODO-needs-audio	Ending. No public transcript. Transcribe from Track 34.
+VS7-001	VS7	30|35?	?		none					TODO-needs-audio	Ending/epilogue. Track unconfirmed (30 or 35); identify by listening.
