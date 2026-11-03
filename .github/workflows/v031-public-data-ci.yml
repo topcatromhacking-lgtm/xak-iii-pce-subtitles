@@ -1,0 +1,30 @@
+name: Xak III v0.31 public-data quality gates
+
+on:
+  push:
+    branches:
+      - chatgpt/v031-stabilization
+  pull_request:
+    branches:
+      - main
+      - grokbot/subtitle-pipeline
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run safe source-only checks
+        run: |
+          python -m unittest discover -s tests -p 'test_verify_v030_release.py' -v
+          python -m unittest discover -s tests -p 'test_audit_cutscene_progress.py' -v
+          python -m unittest discover -s tests -p 'test_build_subs_output_guard.py' -v
+      - name: Inspect remaining scene work
+        run: |
+          python tools/audit_cutscene_progress.py script/xak3_cutscenes.tsv > /tmp/xak_scene_audit.json
+          python -m json.tool /tmp/xak_scene_audit.json >/dev/null
