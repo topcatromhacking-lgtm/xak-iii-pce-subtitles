@@ -26,6 +26,7 @@ PREGAP_BYTES = 225 * SECTOR
 CLEAN_SHA256 = 'af04551ce4bf60d50397e99a6467c9e081b3091caa4eb95c67e7984578021733'
 PATCH_SHA256 = '9a36d3ca5d2adf2f388c7afbb271b9c36169e2f649407a0be0744810dda6246e'
 PATCH_SIZE = 210_217
+EXPECTED_DECODED_SHA256 = 'b1653272c5f6f7fd16938dcdbbb12dbac6da5173d57633caef0bfd034a133c12'
 EXPECTED_WINDOWS = 7
 EXPECTED_APP_SOURCE = 'Xak III - The Eternal Recurrence (Japan) (Track 02).bin'
 
@@ -170,6 +171,8 @@ def full_verify(patch: Path, clean: Path, report: dict) -> None:
         if out.stat().st_size != RAW_BYTES:
             raise ValueError('Decoded Track 02 has wrong length')
         report['decoded_sha256'] = digest(out)
+        if report['decoded_sha256'] != EXPECTED_DECODED_SHA256:
+            raise ValueError('v0.30 decoded Track 02 SHA-256 does not match verified release')
         changed_sectors = []
         bad_sectors = []
         # Verify raw sector data only where it changed. Source pregap must be identical.
