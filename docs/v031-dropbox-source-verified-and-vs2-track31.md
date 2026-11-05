@@ -13,7 +13,7 @@ These hashes were computed on materialized original files in the private workspa
 | Clean Japanese CDDA Track 31 (VS2) | 14,911,680 | `acc2117becf4bdb6d687621529b0be6a9c90961f846e1ca86c86d3ccdbc6ebfa` | PCM 44,100 Hz, signed 16-bit stereo: **84.533333 s**, exactly **6,340 raw CDDA sectors** |
 | User's supplied v0.30 `.xdelta` | 210,217 | `9a36d3ca5d2adf2f388c7afbb271b9c36169e2f649407a0be0744810dda6246e` | Matches release manifest and previous structural VCDIFF check |
 
-**Release status:** The **input identity gate** for v0.30 is now verified from actual original media. Full decoding/EDC-ECC postpatch verification is a separate gate; xdelta3 decoder is not installed in the current environment, so **do not mark output reproducibility verified yet**.
+**Release status (5 November):** v0.30 was **fully decoded against the authenticated clean Track 02** using a VCDIFF/LZMA decoder. All seven windows passed Adler-32; reconstructed output SHA-256 is `b1653272c5f6f7fd16938dcdbbb12dbac6da5173d57633caef0bfd034a133c12`. Across **372 raw sectors changed versus the clean input**, EDC/ECC checks passed without failures; pregap and raw sector headers are unchanged. Against pinned v0.10, the new engine changes only sectors `738, 740, 743, 745, 746, 747, 748`, totaling **6,533 raw-byte differences**. No new emulator/hardware assertion is made.
 
 ## Track identity and scope
 
