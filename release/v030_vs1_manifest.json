@@ -22,11 +22,28 @@
     "sha256": "9a36d3ca5d2adf2f388c7afbb271b9c36169e2f649407a0be0744810dda6246e",
     "size_bytes": 210217,
     "window_count": 7,
-    "structural_validation": "passed"
+    "structural_validation": "passed",
+    "modified_raw_mode1_sectors_vs_clean": 372,
+    "edc_ecc_all_modified_sectors_valid": true,
+    "changed_pregap_sectors": 0,
+    "changed_sector_headers": 0,
+    "changed_raw_bytes_vs_clean": 366564,
+    "engine_delta_sectors_vs_v010": [
+      738,
+      740,
+      743,
+      745,
+      746,
+      747,
+      748
+    ],
+    "engine_changed_raw_bytes_vs_v010": 6533,
+    "original_audio_unchanged": true,
+    "independent_decoder": "tools/decode_v030_lzma_vcdiff.py"
   },
   "expected_output_bytes": 54773376,
-  "decoded_output_sha256": null,
-  "decoded_output_hash_status": "not yet independently verified against clean source",
+  "decoded_output_sha256": "b1653272c5f6f7fd16938dcdbbb12dbac6da5173d57633caef0bfd034a133c12",
+  "decoded_output_hash_status": "independently reconstructed from pinned clean Japanese Track 02 on 2026-11-05; seven LZMA-VCDIFF windows pass Adler32 checks",
   "known_text_to_review": [
     "VS1-005: ???",
     "VS1-056: ...",
@@ -42,5 +59,7 @@
     "v0.10 verified Track02",
     "original Japanese audio",
     "original savestates"
-  ]
+  ],
+  "validation_date": "2026-11-05",
+  "validation_scope": "structural and data-track binary verification; not additional hardware/emulator validation"
 }
